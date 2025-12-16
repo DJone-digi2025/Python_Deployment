@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Interpreter vs Compiler — Python Basics{% endblock %}
+
+{% block content %}
+<header class="glass-card p-6 mb-6">
+  <h1 class="text-3xl font-bold">Interpreter vs Compiler</h1>
+  <p class="mt-2 text-indigo-100">Differences explained clearly with examples and hybrid Python model.</p>
+</header>
+
+<div class="grid md:grid-cols-2 gap-6">
+
+  <article class="glass-card p-6 card-hover anim-card">
+    <div class="kicker">Interpreter</div>
+    <p class="mt-2 text-sm text-indigo-100">
+      Executes source code line by line at runtime.
+    </p>
+    <div class="mt-4 collapse-toggle" data-target="#interp-body">▶ Details</div>
+    <div id="interp-body" class="collapsible-body mt-2 text-sm text-indigo-100">
+      Good for interactive development and debugging. Provides precise error locations.
+    </div>
+  </article>
+
+  <article class="glass-card p-6 card-hover anim-card">
+    <div class="kicker">Compiler</div>
+    <p class="mt-2 text-sm text-indigo-100">
+      Translates full source code into machine code or bytecode before execution.
+    </p>
+    <div class="mt-4 collapse-toggle" data-target="#comp-body">▶ Details</div>
+    <div id="comp-body" class="collapsible-body mt-2 text-sm text-indigo-100">
+      Produces faster executable code. Can distribute without source. Errors found during compilation.
+    </div>
+  </article>
+
+  <article class="glass-card p-6 card-hover anim-card md:col-span-2">
+    <div class="kicker">Python</div>
+    <p class="mt-2 text-sm text-indigo-100">
+      CPython compiles to bytecode (.pyc) and interprets it using a VM — hybrid model.
+    </p>
+    <div class="mt-4 text-sm text-indigo-100">
+      Alternative implementations: PyPy (JIT), Jython, IronPython.
+    </div>
+  </article>
+</div>
+{% endblock %}

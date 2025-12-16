@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Virtual Environment — Python Basics{% endblock %}
+
+{% block content %}
+<header class="glass-card p-6 mb-6">
+  <h1 class="text-3xl font-bold">Virtual Environment (venv)</h1>
+  <p class="mt-2 text-indigo-100">Why and how to use venv on Windows, macOS, and Linux.</p>
+</header>
+
+<div class="glass-card p-5 card-hover anim-card">
+  <div class="kicker">What is venv?</div>
+  <p class="mt-2 text-sm text-indigo-100">Isolates Python packages per project, avoiding conflicts with global packages.</p>
+</div>
+
+<div class="grid md:grid-cols-2 gap-6 mt-6">
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Why use it?</div>
+    <ul class="mt-2 text-sm text-indigo-100">
+      <li>Dependency isolation</li>
+      <li>Reproducible environments</li>
+      <li>Safe experimentation</li>
+    </ul>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Create & Activate</div>
+    <pre class="code-block"><code># create
+python -m venv venv
+
+# activate (Windows)
+venv\Scripts\activate
+
+# activate (macOS/Linux)
+source venv/bin/activate
+
+# deactivate
+deactivate</code></pre>
+  </article>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{% block title %}Python Basics{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="min-h-screen bg-gradient-to-r from-indigo-900 via-indigo-800 to-indigo-900">
+
+  <!-- NAV -->
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="{{ url_for('index') }}" class="text-white font-semibold">Python Basics</a>
+    <div class="space-x-3">
+      <a href="{{ url_for('variables') }}" class="text-indigo-100">Basics</a>
+      <a href="{{ url_for('controlflow') }}" class="text-indigo-100">Control Flow</a>
+      <a href="{{ url_for('datastructures') }}" class="text-indigo-100">Data Structures</a>
+      <a href="{{ url_for('functions') }}" class="text-indigo-100">Functions</a>
+      <a href="{{ url_for('modules') }}" class="text-indigo-100">Modules</a>
+      <a href="{{ url_for('flask_page') }}" class="text-indigo-100">Flask</a>
+      <a href="{{ url_for('venv') }}" class="text-indigo-100">Venv</a>
+      <a href="{{ url_for('about') }}" class="text-indigo-100">About</a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-5xl mx-auto px-6 py-8">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="max-w-6xl mx-auto px-6 py-6 text-sm text-indigo-200 text-center">
+    © Python Basics
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+</body>
+</html>

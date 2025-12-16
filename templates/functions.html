@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Functions — Python Basics{% endblock %}
+
+{% block content %}
+<header class="glass-card p-6 mb-6">
+  <h1 class="text-3xl font-bold">Functions</h1>
+  <p class="mt-2 text-indigo-100">Defining functions, arguments, return values, and lambda expressions.</p>
+</header>
+
+<div class="grid gap-6">
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Defining</div>
+    <pre class="code-block"><code>def greet(name):
+    return "Hello " + name
+
+print(greet("Alice"))</code></pre>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Arguments & Return</div>
+    <pre class="code-block"><code>def add(a, b=0):
+    return a + b
+
+print(add(2, 3))</code></pre>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Lambda</div>
+    <pre class="code-block"><code>square = lambda x: x * x
+print(square(5))  # 25</code></pre>
+  </article>
+</div>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}
+Control Flow Statements — Python Basics
+{% endblock %}
+
+{% block content %}
+
+<header class="glass-card p-6 mb-6">
+  <h1 class="text-3xl font-bold">Control Flow Statements</h1>
+  <p class="mt-2 text-indigo-100">
+    if, elif, else, loops, and flowchart-style cards for visual learners.
+  </p>
+</header>
+
+<!-- CONTENT GRID -->
+<div class="grid md:grid-cols-3 gap-6">
+
+  <!-- IF / ELIF / ELSE -->
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Conditional</div>
+    <h3 class="text-lg font-semibold mt-1">if / elif / else</h3>
+    <pre class="code-block mt-3"><code>if score &gt;= 90:
+    grade = 'A'
+elif score &gt;= 80:
+    grade = 'B'
+else:
+    grade = 'C'</code></pre>
+  </article>
+
+  <!-- FOR LOOP -->
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Loop</div>
+    <h3 class="text-lg font-semibold mt-1">for loop</h3>
+    <pre class="code-block mt-3"><code>for i in range(5):
+    print(i)</code></pre>
+  </article>
+
+  <!-- WHILE LOOP -->
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Loop</div>
+    <h3 class="text-lg font-semibold mt-1">while loop</h3>
+    <pre class="code-block mt-3"><code>i = 0
+while i &lt; 5:
+    print(i)
+    i += 1</code></pre>
+  </article>
+
+  <!-- BREAK / CONTINUE / PASS -->
+  <article class="glass-card p-5 card-hover anim-card md:col-span-3">
+    <div class="kicker">Flow Control</div>
+    <h3 class="text-lg font-semibold mt-1">break, continue, pass</h3>
+    <pre class="code-block mt-3"><code>for i in range(10):
+    if i == 5:
+        break       # exits loop
+    if i % 2 == 0:
+        continue    # skips iteration
+    pass            # placeholder</code></pre>
+  </article>
+
+</div>
+
+<!-- FLOWCHART SECTION -->
+<section class="mt-10">
+  <h3 class="text-xl font-semibold mb-4">Flowchart-style Logic</h3>
+  <div class="grid md:grid-cols-3 gap-4">
+    <div class="glass-card p-4 card-hover">
+      <div class="kicker">Start</div>
+      <p class="text-sm mt-2">Begin program</p>
+    </div>
+    <div class="glass-card p-4 card-hover">
+      <div class="kicker">Decision</div>
+      <p class="text-sm mt-2">score ≥ 50?</p>
+    </div>
+    <div class="glass-card p-4 card-hover">
+      <div class="kicker">Result</div>
+      <p class="text-sm mt-2">Pass / Fail</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

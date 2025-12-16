@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Data Structures — Python Basics{% endblock %}
+
+{% block content %}
+<header class="glass-card p-6 mb-6">
+  <h1 class="text-3xl font-bold">Data Structures</h1>
+  <p class="mt-2 text-indigo-100">List, Tuple, Set, Dictionary with practical examples.</p>
+</header>
+
+<div class="grid md:grid-cols-2 gap-6">
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">List</div>
+    <pre class="code-block"><code>arr = [1, 2, 3]
+arr.append(4)
+arr[0] = 10
+del arr[1]</code></pre>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Tuple</div>
+    <pre class="code-block"><code>t = (1,2,3)
+# t[0] = 10 # immutable</code></pre>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Set</div>
+    <pre class="code-block"><code>s = {1,2,3}
+s.add(4)
+s.remove(2)</code></pre>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Dictionary</div>
+    <pre class="code-block"><code>d = {"a":1, "b":2}
+d["c"] = 3
+d["a"] = 10
+del d["b"]</code></pre>
+  </article>
+</div>
+{% endblock %}

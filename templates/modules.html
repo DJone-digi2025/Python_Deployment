@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Modules — Python Basics{% endblock %}
+
+{% block content %}
+<header class="glass-card p-6 mb-6">
+  <h1 class="text-3xl font-bold">Modules & Packages</h1>
+  <p class="mt-2 text-indigo-100">Examples of import, from-import, and commonly used modules: math, random, datetime, json.</p>
+</header>
+
+<div class="grid md:grid-cols-2 gap-6">
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Import</div>
+    <pre class="code-block"><code>import math
+from random import randint</code></pre>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">math</div>
+    <pre class="code-block"><code>import math
+math.sqrt(25)  # 5.0
+math.pi</code></pre>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">random</div>
+    <pre class="code-block"><code>import random
+random.random()
+random.randint(1,10)</code></pre>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">datetime & json</div>
+    <pre class="code-block"><code>import datetime
+now = datetime.datetime.now()
+
+import json
+json.dumps({"a":1})</code></pre>
+  </article>
+</div>
+{% endblock %}

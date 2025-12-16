@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Python Basics — Home{% endblock %}
+
+{% block content %}
+<header class="glass-card p-6 mb-6">
+  <h1 class="text-3xl font-bold">Welcome to Python Basics</h1>
+  <p class="mt-2 text-indigo-100">
+    Interactive, animated lessons on Python fundamentals. Designed for classroom and self-study.
+  </p>
+</header>
+
+<div class="grid md:grid-cols-3 gap-6">
+  <div class="glass-card p-5 card-hover anim-card">
+    <h3 class="text-lg font-semibold">Variables & Datatypes</h3>
+    <p class="mt-2 text-sm text-indigo-100">Learn how to declare variables, use different datatypes, and perform operations.</p>
+  </div>
+
+  <div class="glass-card p-5 card-hover anim-card">
+    <h3 class="text-lg font-semibold">Control Flow</h3>
+    <p class="mt-2 text-sm text-indigo-100">Understand if, elif, else, loops, and flow control keywords like break, continue, pass.</p>
+  </div>
+
+  <div class="glass-card p-5 card-hover anim-card">
+    <h3 class="text-lg font-semibold">Data Structures</h3>
+    <p class="mt-2 text-sm text-indigo-100">Hands-on examples with List, Tuple, Set, and Dictionary.</p>
+  </div>
+
+  <div class="glass-card p-5 card-hover anim-card">
+    <h3 class="text-lg font-semibold">Functions</h3>
+    <p class="mt-2 text-sm text-indigo-100">Define functions, pass arguments, return values, and use lambda expressions.</p>
+  </div>
+
+  <div class="glass-card p-5 card-hover anim-card">
+    <h3 class="text-lg font-semibold">Modules & Packages</h3>
+    <p class="mt-2 text-sm text-indigo-100">Learn to import Python modules and explore common modules like math, random, datetime, and json.</p>
+  </div>
+
+  <div class="glass-card p-5 card-hover anim-card">
+    <h3 class="text-lg font-semibold">Flask Framework</h3>
+    <p class="mt-2 text-sm text-indigo-100">Introduction to lightweight web development with Flask.</p>
+  </div>
+</div>
+{% endblock %}

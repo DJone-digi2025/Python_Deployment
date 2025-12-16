@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Python Basics — Variables & Datatypes{% endblock %}
+
+{% block content %}
+<header class="glass-card p-6 mb-6">
+  <h1 class="text-3xl font-bold">Variables & Datatypes</h1>
+  <p class="mt-2 text-indigo-100">Learn about variables, datatypes, input/output, and operators in Python.</p>
+</header>
+
+<div class="grid md:grid-cols-2 gap-6">
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Variables</div>
+    <h3 class="text-xl font-semibold mt-1">What is a variable?</h3>
+    <p class="mt-2 text-sm text-indigo-100">A named reference to a value in memory. Assignment uses <code class="inline">=</code>.</p>
+    <div class="mt-4 collapse-toggle" data-target="#var-demo">▶ Show example</div>
+    <div id="var-demo" class="collapsible-body mt-2">
+      <pre class="code-block"><code>name = "Alice"
+age = 21
+pi = 3.14159
+print(name, age)</code></pre>
+    </div>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Datatypes</div>
+    <h3 class="text-xl font-semibold mt-1">Common datatypes</h3>
+    <ul class="mt-2 text-sm text-indigo-100">
+      <li><strong>int</strong> — integers</li>
+      <li><strong>float</strong> — floating point numbers</li>
+      <li><strong>str</strong> — text</li>
+      <li><strong>bool</strong> — True / False</li>
+    </ul>
+    <div class="mt-4 collapse-toggle" data-target="#dtype-more">▶ Examples</div>
+    <div id="dtype-more" class="collapsible-body mt-2">
+      <pre class="code-block"><code>a = 10      # int
+b = 2.5     # float
+s = "hello" # str
+f = True    # bool</code></pre>
+    </div>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Input & Output</div>
+    <h3 class="text-xl font-semibold mt-1">input() and print()</h3>
+    <p class="mt-2 text-sm text-indigo-100">Use <code>input()</code> to read from user and <code>print()</code> to display output.</p>
+    <div class="mt-4 collapse-toggle" data-target="#io-demo">▶ Demo</div>
+    <div id="io-demo" class="collapsible-body mt-2">
+      <pre class="code-block"><code>name = input("Enter name: ")
+print("Hello,", name)</code></pre>
+    </div>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Operators</div>
+    <h3 class="text-xl font-semibold mt-1">Arithmetic & Comparison</h3>
+    <ul class="mt-2 text-sm text-indigo-100">
+      <li><strong>+</strong> add, <strong>-</strong> subtract, <strong>*</strong> multiply, <strong>/</strong> divide</li>
+      <li><strong>==</strong>, <strong>&lt;</strong>, <strong>&gt;</strong>, <strong>!=</strong></li>
+    </ul>
+    <div class="mt-4 collapse-toggle" data-target="#op-demo">▶ Examples</div>
+    <div id="op-demo" class="collapsible-body mt-2">
+      <pre class="code-block"><code>5 + 3   # 8
+5 / 2   # 2.5
+5 // 2  # 2 (floor)
+5 % 2   # 1 (remainder)</code></pre>
+    </div>
+  </article>
+</div>
+{% endblock %}

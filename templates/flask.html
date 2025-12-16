@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Flask Framework — Python Basics{% endblock %}
+
+{% block content %}
+<header class="glass-card p-6 mb-6">
+  <h1 class="text-3xl font-bold">Flask Framework</h1>
+  <p class="mt-2 text-indigo-100">Lightweight Python web framework. Covers architecture, request-response, routing, and Jinja2 templates.</p>
+</header>
+
+<div class="grid md:grid-cols-2 gap-6">
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">What is Flask?</div>
+    <p class="mt-2 text-sm text-indigo-100">A micro web framework that is simple and extensible.</p>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Why Flask?</div>
+    <ul class="mt-2 text-sm text-indigo-100">
+      <li>Minimal core</li>
+      <li>Easy routing & templates</li>
+      <li>Great for learning and small projects</li>
+    </ul>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Architecture</div>
+    <p class="mt-2 text-sm text-indigo-100">Client → Flask App → WSGI Server → Response. Uses Werkzeug & Jinja2 internally.</p>
+  </article>
+
+  <article class="glass-card p-5 card-hover anim-card">
+    <div class="kicker">Routing & Jinja2</div>
+    <p class="mt-2 text-sm text-indigo-100">Routes map URL paths to functions. Jinja2 templates allow dynamic HTML.</p>
+    <pre class="code-block mt-2"><code>from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+if __name__ == "__main__":
+    app.run(debug=True)</code></pre>
+  </article>
+</div>
+{% endblock %}
